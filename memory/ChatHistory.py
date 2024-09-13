@@ -12,8 +12,6 @@ def get_session_history(session_id):
 
     # Check if the result is None (no session ID found) or contains data (session ID exists)
     if result is None:
-        history=SQLChatMessageHistory(session_id=session_id, connection=engine)
-        return history.messages
+        SQLChatMessageHistory(session_id=session_id, connection=engine)
     else:
-        history = SQLChatMessageHistory(session_id=session_id, connection=engine)
-        return history.messages
+        return result
