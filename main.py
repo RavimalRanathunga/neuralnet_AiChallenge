@@ -2,7 +2,9 @@ import os
 import dotenv
 from langchain_google_genai  import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate
-import tools.tools
+from tools.tools import tools
+from memory.ChatHistory import get_session_history
+from langchain_core.runnables.history import RunnableWithMessageHistory
 
 dotenv.load_dotenv()
 
@@ -37,4 +39,11 @@ while True:
     agent = create_tool_calling_agent(model, tools, prompt)
     agent_executor = AgentExecutor(agent=agent, tools=tools, verbose=False)
 
-    
+
+    conversational_agent_executor = RunnableWithMessageHistory(
+    agent_executor,
+    get_session_history,
+    input_messages_key="messages",
+    output_messages_key="output",
+    history_messages_key="chat_history"
+    )
