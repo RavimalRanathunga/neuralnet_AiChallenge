@@ -17,8 +17,8 @@ from vectorstore.documentLoader import DocumentLoader
 # memory.check_chathistory_database_connection()
 # memory.add_messages_to_chat_history()
 
-file_path="docs\manifesto-ranil.pdf"
-document=DocumentLoader(file_path)
-pdf_data=document.load_documents()
-print(pdf_data)
-print(document.sort_pdf_documents(pdf_data))
+# file_path="docs\manifesto-ranil.pdf"
+# document=DocumentLoader(file_path)
+# pdf_data=document.load_documents()
+# print(pdf_data)
+# print(document.sort_pdf_documents(pdf_data))

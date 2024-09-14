@@ -6,4 +6,4 @@ retriever_tool = create_retriever_tool(
     "candidate_manifesto_search",
     "Search for information about candidates and their manifestoes",
 )
-tools=[]
+tools=[retriever_tool]

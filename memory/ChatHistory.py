@@ -14,10 +14,10 @@ def get_session_history(session_id):
     if result is None:
         history=SQLChatMessageHistory(session_id=session_id, connection=engine)
         history.__init__(session_id=session_id, connection=engine)
-        return history.messages
+        return history
     else:
         history=SQLChatMessageHistory(session_id=session_id, connection=engine)
-        return history.messages 
+        return history
 
 def add_chat_history(session_id,messages):
     history=SQLChatMessageHistory(session_id=session_id, connection=engine)

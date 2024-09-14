@@ -1,4 +1,4 @@
-from langchain_community.document_loaders import PyPDFLoader,TextLoader
+from langchain_community.document_loaders import PyPDFLoader
 
 class DocumentLoader:
 
@@ -10,11 +10,6 @@ class DocumentLoader:
         loader = PyPDFLoader(self.filepath)
         pdf_data = loader.load()
         return pdf_data
-    
-    # def load_text(self):
-    #     loader = TextLoader(self.filepath)
-    #     text_data = loader.load()
-    #     return text_data
     
     def sort_pdf_documents(self,pdf_data):
         for data in pdf_data:

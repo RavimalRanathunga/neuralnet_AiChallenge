@@ -1,5 +1,5 @@
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-from documentLoader import sorted_manifestoes
+from .documentLoader import sorted_manifestoes
 
 text_splitter = RecursiveCharacterTextSplitter(
     chunk_size = 150,
@@ -15,4 +15,3 @@ for candidate in sorted_manifestoes:
 
     chunked_manifestoes[candidate] = chunks
 
-print(chunked_manifestoes["ranil wikramasimghe"])
