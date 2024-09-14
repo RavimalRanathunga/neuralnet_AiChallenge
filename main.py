@@ -3,8 +3,10 @@ import dotenv
 from langchain_google_genai  import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate
 from tools.tools import tools
-from memory.ChatHistory import get_session_history
+from memory.ChatHistory import get_session_history,add_chat_history
 from langchain_core.runnables.history import RunnableWithMessageHistory
+from langchain.agents import AgentExecutor, create_tool_calling_agent
+from langchain_core.messages import HumanMessage,AIMessage
 
 dotenv.load_dotenv()
 
@@ -28,13 +30,11 @@ while True:
             "system",
             "You are a helpful assistant you can always check {chat_history} and answer question accordingly. You may not need to use tools for every query - the user may just want to chat!",
         ),
-        # ("placeholder", "{messages}"),
-        # ("placeholder", "{agent_scratchpad}"),
-        ("human",user_input),
+        ("human", "{messages}"),
+        ("placeholder", "{agent_scratchpad}"),
+        
     ]
     )
-
-    from langchain.agents import AgentExecutor, create_tool_calling_agent
 
     agent = create_tool_calling_agent(model, tools, prompt)
     agent_executor = AgentExecutor(agent=agent, tools=tools, verbose=False)
@@ -47,3 +47,12 @@ while True:
     output_messages_key="output",
     history_messages_key="chat_history"
     )
+
+    response=conversational_agent_executor.invoke(
+    {"messages": [HumanMessage(user_input)]},
+    {"configurable": {"session_id": "unused"}},
+    )
+
+    add_chat_history("test_session_id",[HumanMessage(user_input),AIMessage(response["output"])])
+
+
