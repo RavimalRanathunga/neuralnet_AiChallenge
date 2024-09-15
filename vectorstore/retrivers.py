@@ -1,35 +1,27 @@
 from langchain_google_genai  import GoogleGenerativeAIEmbeddings
 import os 
 import dotenv
-from langchain_chroma import Chroma
-from .textSplitters import chunked_manifestoes
-from langchain.docstore.document import Document 
+from langchain_community.vectorstores import Chroma
 dotenv.load_dotenv()
 
 GEMINI_API_KEY=os.environ["GEMINI_API_KEY"]
 
-def initilize_embedding_model():
-    embedding_model= GoogleGenerativeAIEmbeddings(
-        model="models/embedding-001",
-        google_api_key=GEMINI_API_KEY
-    )
-    return embedding_model
+class Retriver:
+    def __init__(self) -> None:
+         self.retrivers={}
 
-def create_vectorstore(embedding_model):
-    vectorstore = Chroma(collection_name="candidate_manifesto",embedding_function=embedding_model)
-    return vectorstore
+    def initilize_embedding_model(self):
+        embedding_model= GoogleGenerativeAIEmbeddings(
+            model="models/embedding-001",
+            google_api_key=GEMINI_API_KEY
+        )
+        return embedding_model
 
-def add_documents():
-    for candidate in chunked_manifestoes:
-        documents=chunked_manifestoes[candidate]
-        vectorstore.from_documents(documents=documents,embedding=embedding_model)
-
-def create_retrivers():
-    retriver=vectorstore.as_retriever()
-    return retriver
-
-embedding_model=initilize_embedding_model()
-vectorstore=create_vectorstore(embedding_model)
-add_documents()
-retriver=create_retrivers()
+    
+    def add_documents(self,candidate_name,embedding_model,documents):
+            vectorstore=Chroma.from_documents(documents=documents,embedding=embedding_model,persist_directory="./chroma_db_"+candidate_name)
+            retriver=vectorstore.as_retriever()
+            # print(retriver.invoke(f"what is public tranportation policy of {candidate_name}"))
+            self.retrivers[candidate_name] = retriver
+            print(self.retrivers)
 

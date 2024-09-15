@@ -23,12 +23,13 @@ class DocumentLoader:
 cadidate_manifesto_file_paths={"namal rajapaksha":"docs\manifesto-namal.pdf","sajith premadasa":"docs\manifesto-sajith.pdf","anura kumara":"docs\manifesto-anura.pdf","ranil wikramasimghe":"docs\manifesto-ranil.pdf"}
 sorted_manifestoes={}
 
-for candidate in cadidate_manifesto_file_paths:
-    document=DocumentLoader(cadidate_manifesto_file_paths[candidate])
-    pdf_data=document.load_documents()
+def document_loading():
+    for candidate in cadidate_manifesto_file_paths:
+        document=DocumentLoader(cadidate_manifesto_file_paths[candidate])
+        pdf_data=document.load_documents()
 
-    sorted_pdf=document.sort_pdf_documents(pdf_data)
-    sorted_manifestoes[candidate] = sorted_pdf
+        sorted_pdf=document.sort_pdf_documents(pdf_data)
+        sorted_manifestoes[candidate] = sorted_pdf
 
 
 

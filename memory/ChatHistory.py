@@ -22,4 +22,8 @@ def get_session_history(session_id):
 def add_chat_history(session_id,messages):
     history=SQLChatMessageHistory(session_id=session_id, connection=engine)
     history.clear()
-    # history.add_messages(messages)
+    history.add_messages(messages)
+
+def clear_chat_history(session_id):
+    history=SQLChatMessageHistory(session_id=session_id, connection=engine)
+    history.clear()

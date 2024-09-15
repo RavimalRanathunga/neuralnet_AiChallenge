@@ -5,3 +5,4 @@ langchain_community
 PyPDFLoader
 rapidocr-onnxruntime
 langchain-chroma
+duckduckgo-search
