@@ -1,4 +1,4 @@
-<font color="red">This text will be blue</font>
+<font color="green">This text will be blue</font>
 
 <h1>Election Transparency App</h1>
 
