@@ -18,6 +18,8 @@ Includes general information about the ongoing election, candidates, and key dat
 <h2>Fact-Checking:</h2>
 Misinformation is rampant during election campaigns. This feature ensures that voters receive only verified facts by cross-referencing candidate claims with reliable data sources.
 
+<h1>Acknowledgments</h1>
+
 
 
 
