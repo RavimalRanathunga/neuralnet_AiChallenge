@@ -1,5 +1,6 @@
+<font color="blue">This text will be blue</font>
 
-<h1><font color="blue">Election Transparency App</h1>
+<h1>Election Transparency App</h1>
 
 ![image](https://github.com/user-attachments/assets/80a0559e-14b5-4d72-872b-13da49b837d7)
 
