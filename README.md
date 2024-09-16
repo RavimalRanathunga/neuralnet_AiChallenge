@@ -19,6 +19,9 @@ Includes general information about the ongoing election, candidates, and key dat
 Misinformation is rampant during election campaigns. This feature ensures that voters receive only verified facts by cross-referencing candidate claims with reliable data sources.
 
 <h1>contribution</h1>
+Thanks to the following people who have contributed to this project:
+
+[@OmanthaYatawara](https://github.com/OmanthaYatawara)
 
 
 
