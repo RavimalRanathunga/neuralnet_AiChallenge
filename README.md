@@ -23,8 +23,10 @@ Thanks to the following people who have contributed to this project:
 
 [@RavimalRanathunga](https://github.com/RavimalRanathunga)  
 
-[@keshj](https://github.com/keshj)
-[@OmanthaYatawara](https://github.com/OmanthaYatawara)
+[@keshj](https://github.com/keshj)  
+
+[@OmanthaYatawara](https://github.com/OmanthaYatawara)  
+
 [@OshmikaMadheera](https://github.com/OshmikaMadheera)
 
 
