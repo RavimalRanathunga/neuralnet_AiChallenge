@@ -15,6 +15,10 @@ Utilizes real-time data to offer predictions on voting outcomes, based on histor
 <h2>Election Insights:</h2>
 Includes general information about the ongoing election, candidates, and key dates. It also provides analysis on election-related news, trends, and key issues relevant to the political climate.
 
+<h2>Fact-Checking:</h2>
+Misinformation is rampant during election campaigns. This feature ensures that voters receive only verified facts by cross-referencing candidate claims with reliable data sources.
+
+
 
 
 
