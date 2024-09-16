@@ -1,5 +1,5 @@
 
-<h1 colour="red">Election Transparency App</h1>
+<h1 colour=red>Election Transparency App</h1>
 
 ![image](https://github.com/user-attachments/assets/80a0559e-14b5-4d72-872b-13da49b837d7)
 
