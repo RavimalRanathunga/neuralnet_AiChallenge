@@ -6,7 +6,7 @@
 This application is designed to combat the increasing spread of misinformation during elections by offering voters reliable, fact-checked information about political candidates and their campaigns. With features such as manifesto comparison, vote prediction, and general election insights, this app aims to empower voters to make informed decisions based on verified data rather than media noise or unverified claims.
 
 <h1>Features😱</h1>
-</h2>Manifesto Comparison:</h2>
+<h2>Manifesto Comparison:</h2>
 Provides side-by-side comparisons of political candidates' manifestos. Users can easily see the key policies and promises each candidate is making, allowing them to better understand their options before voting.
 
 
