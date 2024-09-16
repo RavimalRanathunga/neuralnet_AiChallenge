@@ -9,4 +9,13 @@ This application is designed to combat the increasing spread of misinformation d
 <h2>Manifesto Comparison:</h2>
 Provides side-by-side comparisons of political candidates' manifestos. Users can easily see the key policies and promises each candidate is making, allowing them to better understand their options before voting.
 
+<h2>Vote Prediction:</h2>
+Utilizes real-time data to offer predictions on voting outcomes, based on historical voting patterns, demographic data, and public opinion polls. This feature helps users get an idea of potential election trends.
+
+<h2>Election Insights:</h2>
+Includes general information about the ongoing election, candidates, and key dates. It also provides analysis on election-related news, trends, and key issues relevant to the political climate.
+
+
+
+
 
